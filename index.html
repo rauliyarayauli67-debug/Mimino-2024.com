@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://127.0.0.1:5501/index.html#team -->
+<html lang="ka"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="icon" type="image/jpg" href="./Fc Mimino 2024_files/mimino-logo.jpg">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fc Mimino 2024</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #080808;
+            color: white;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* ზედა მენიუ */
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            width: 100%;
+            min-height: 80px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 12px 6%;
+
+            background: #050505;
+            border-bottom: 2px solid #f5d000;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-image {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .brand-name {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .brand-name small {
+            display: block;
+            margin-top: 5px;
+            font-size: 12px;
+            color: #f5d000;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #f5d000;
+        }
+
+        .menu {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 30px;
+        }
+
+        /* მთავარი ნაწილი */
+
+        .hero {
+            min-height: 620px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 80px 8%;
+
+            background:
+                radial-gradient(circle at 80% 40%, #383000 0%, #111 35%, #202020 75%);
+        }
+
+        .hero-copy {
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            margin-bottom: 20px;
+            color: #f5d000;
+        }
+
+        .club-line {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .club-line span {
+            color: #f5d000;
+        }
+
+        .dedication {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .club-info {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .primary-button {
+            display: inline-block;
+            padding: 15px 28px;
+
+            background: #f5d000;
+            color: #050505;
+
+            font-weight: bold;
+            border-radius: 5px;
+
+            transition: 0.3s;
+        }
+
+        .primary-button:hover {
+            transform: translateY(-3px);
+            background: white;
+        }
+
+        .hero-bird img {
+            width: 400px;
+            max-width: 90%;
+            border-radius: 15px;
+        }
+
+        /* თამაშის ბლოკი */
+
+        .match-card {
+            width: 85%;
+            margin: 70px auto;
+
+            padding: 45px;
+
+            background: #111;
+            border: 1px solid #333;
+            border-top: 4px solid #f5d000;
+
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .eyebrow {
+            color: #f5d000;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .match-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            margin: 30px 0;
+        }
+
+        .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .match-logo {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .match-time {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .match-time strong {
+            font-size: 35px;
+            color: #f5d000;
+        }
+
+        .opponent-crest {
+            width: 110px;
+            height: 110px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #f5d000;
+            color: #111;
+
+            border-radius: 50%;
+            font-size: 55px;
+            font-weight: bold;
+        }
+
+        .secondary-button {
+            padding: 12px 25px;
+            background: transparent;
+            border: 1px solid #f5d000;
+            color: #f5d000;
+            border-radius: 5px;
+        }
+
+        /* სიახლეები */
+
+        .news {
+            width: 85%;
+            margin: 100px auto;
+        }
+
+        .section-heading {
+            margin-bottom: 30px;
+        }
+
+        .section-heading h2,
+        .history h2,
+        .team-section h2,
+        .kits h2 {
+            font-size: 42px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .news-card {
+            min-height: 250px;
+            padding: 30px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            border-radius: 10px;
+            border: 1px solid #333;
+
+            background: linear-gradient(145deg, #202020, #0c0c0c);
+        }
+
+        .news-card h3 {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .news-card span {
+            color: #f5d000;
+        }
+
+        .main-story {
+            background:
+                linear-gradient(145deg, #393000, #111);
+        }
+
+        /* ისტორია */
+
+        .history {
+            width: 85%;
+            margin: 100px auto;
+
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+
+            padding: 60px;
+
+            background: #111;
+            border-radius: 10px;
+        }
+
+        .history-copy {
+            line-height: 1.9;
+            color: #ddd;
+        }
+
+        .history-copy p {
+            margin-bottom: 20px;
+        }
+
+        /* გუნდი */
+
+        .team-section {
+            width: 85%;
+            margin: 100px auto;
+        }
+
+        .players {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+
+            margin-top: 30px;
+        }
+
+        .players > div {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            padding: 15px;
+
+            background: #111;
+            border: 1px solid #292929;
+            border-radius: 5px;
+        }
+
+        .players strong {
+            color: #f5d000;
+            font-size: 20px;
+            min-width: 30px;
+        }
+
+        .junior-squad {
+            margin-top: 70px;
+        }
+
+        .junior-heading {
+            margin-bottom: 20px;
+        }
+
+        .junior-heading h3 {
+            font-size: 30px;
+        }
+
+        /* ფორმები */
+
+        .kits {
+            width: 85%;
+            margin: 100px auto;
+        }
+
+        .kits-heading {
+            margin-bottom: 35px;
+        }
+
+        .kits-heading > p:last-child {
+            color: #aaa;
+            margin-top: 10px;
+        }
+
+        .kit-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .kit-card {
+            background: #111;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        .kit-card img {
+            width: 100%;
+            height: 550px;
+            object-fit: contain;
+            background: white;
+            display: block;
+        }
+
+        .kit-details {
+            padding: 25px;
+        }
+
+        .kit-details h3 {
+            font-size: 25px;
+        }
+
+        /* ქვედა ნაწილი */
+
+        footer {
+            margin-top: 100px;
+            padding: 50px 20px;
+
+            text-align: center;
+
+            background: #050505;
+            border-top: 2px solid #f5d000;
+        }
+
+        .footer-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #aaa;
+        }
+
+        /* ნელ-ნელა გამოჩენის ეფექტი */
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition:
+                opacity 1s ease,
+                transform 1s ease;
+        }
+
+        .scroll-reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition:
+                opacity 1s ease,
+                transform 1s ease;
+        }
+
+        .scroll-reveal-left.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scroll-reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition:
+                opacity 1s ease,
+                transform 1s ease;
+        }
+
+        .scroll-reveal-right.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* მოთამაშეების ნელ-ნელა გამოჩენა */
+
+        .players > div {
+            opacity: 0;
+            transform: translateY(25px);
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease,
+                background 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .players > div.player-show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* სიახლეების ბარათების ეფექტი */
+
+        .news-card {
+            opacity: 0;
+            transform: translateY(40px);
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .news-card.news-show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .news-card:hover {
+            transform: translateY(-8px);
+            border-color: #f5d000;
+            box-shadow: 0 15px 35px rgba(245, 208, 0, 0.15);
+        }
+
+        /* ფორმების ნელ-ნელა გამოჩენა */
+
+        .kit-card {
+            opacity: 0;
+            transform: translateY(50px);
+            transition:
+                opacity 0.9s ease,
+                transform 0.9s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .kit-card.kit-show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .kit-card:hover {
+            transform: translateY(-8px);
+            border-color: #f5d000;
+            box-shadow: 0 15px 40px rgba(245, 208, 0, 0.18);
+        }
+
+        /* ტელეფონისთვის */
+
+        @media (max-width: 800px) {
+
+            nav {
+                display: none;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .match-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .news-grid,
+            .kit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .history {
+                grid-template-columns: 1fr;
+                padding: 30px;
+            }
+
+            .players {
+                grid-template-columns: 1fr;
+            }
+
+            .kit-card img {
+                height: auto;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <a class="brand" href="http://127.0.0.1:5501/index.html#home">
+
+        <img class="" src="./Fc Mimino 2024_files/mimino-logo.jpg" height="110">
+
+        <span class="brand-name">
+            ს.კ მიმინო 2024
+            <small>ს.კ მიმინო ჯუნიორი 2026</small>
+        </span>
+
+    </a>
+
+    <nav>
+        <a href="http://127.0.0.1:5501/index.html#news">სიახლეები</a>
+        <a href="http://127.0.0.1:5501/index.html#team">გუნდი</a>
+        <a href="http://127.0.0.1:5501/index.html#kits">ფორმები</a>
+    </nav>
+
+    <button class="menu">☰</button>
+
+</header>
+
+
+<main id="home">
+
+    <!-- მთავარი -->
+
+    <section class="hero">
+
+        <div class="hero-copy scroll-reveal-left show">
+
+            <h1>უფლის იწამედ მარად</h1>
+
+            <p class="club-line">
+                ს.კ მიმინო
+                <span>·</span>
+                ს.კ მიმინო ჯუნიორი
+            </p>
+
+            <p class="dedication">
+                ლუკასთვის და ბექასთვის
+            </p>
+
+            <p class="club-info">
+                ს.კ მიმინო 2024<br>
+                ს.კ მიმინო ჯუნიორი 2026
+            </p>
+
+            <a class="primary-button" href="http://127.0.0.1:5501/index.html#fixtures">
+                შემდეგი თამაში
+            </a>
+
+        </div>
+
+        <div class="scroll-reveal-right show">
+
+            <img src="./Fc Mimino 2024_files/mimino-logo.jpg" height="460" width="560">
+
+        </div>
+
+    </section>
+
+    
+
+
+    <!-- სიახლეები -->
+
+    <section class="news" id="news">
+
+        <div class="section-heading scroll-reveal show">
+
+            <p class="eyebrow">
+                LATEST
+            </p>
+
+            <h2>
+                კლუბის სიახლეები
+            </h2>
+
+        </div>
+
+
+        <div class="news-grid">
+
+            <a class="news-card main-story news-show" href="http://127.0.0.1:5501/index.html#history" style="transition-delay: 0s;">
+
+                <p>გუნდი</p>
+
+                <h3>
+                    
+                მიმინოს ისტორია
+                </h3>
+
+                <span>
+                    წაიკითხე მეტი →
+                </span>
+
+            </a>
+
+
+            <article class="news-card news-show" style="transition-delay: 0.18s;">
+
+                <p>ვარჯიში</p>
+
+                <h3>
+                    ვარჯიშის პროცესები
+                </h3>
+
+                <span>
+                    წაიკითხე მეტი →
+                </span>
+
+            </article>
+
+
+            <article class="news-card news-show" style="transition-delay: 0.36s;">
+
+                <p>აკადემია</p>
+
+                <h3>
+                    ახალი თაობა, ახალი ოცნება
+                </h3>
+
+                <span>
+                    წაიკითხე მეტი →
+                </span>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ისტორია -->
+
+<section class="history scroll-reveal show" id="history">
+
+        <div>
+
+        </div>
+
+ <div class="history-copy">
+
+        <h2>მიმინოს დაარსება</h2>
+
+            <p>
+      ს.კ მიმინო დაარსდა 2024 წლის გაზაფხულზე
+                და ასპარეზობა მიიღო თბილისის ფეხბურთის
+                მოყვარულთა ლიგაში. გუნდმა საკმაოდ კარგად
+                დაიწყო პირველი სეზონი.
+            </p>
+
+            <p>
+                მათ ლოგოში ორი ჯვარი, რომელიც გამოსახულია,
+                პატივისცემით არის დამატებული, რადგან ორი
+                ძმაკაცი — ლუკა და ბექა — რომლებიც უნდა
+                ყოფილიყვნენ გუნდის წევრები, სამწუხაროდ
+                გარდაიცვალნენ. მშვიდად ამყოფოს მათი სულები.
+            </p>
+
+            <p>
+                გუნდმა მათ პატივი აგო და ყოველ ოფიციალურ
+                თამაშზე მაიკა გამოაქვს, სადაც ბექას და
+                ლუკას ფოტოებია გამოსახული.
+            </p>
+
+            <p>
+                მიმინო აგრძელებს სხვა გუნდებთან თამაშს
+                და წარმატებით გამოდის ყოველი თამაშიდან.
+                გუნდის მთავარი მიზანი შექმნიდან არის
+                საქართველოს უმაღლეს ლიგაში ასვლა.
+            </p>
+
+            <p></p>
+
+        <div>
+
+            <h2>
+                მიმდინარე ვარჯიშები
+            </h2>
+
+        </div>
+
+
+        <div class="training-copy">
+
+        <p>
+               ვარჯიშების პროცესი ორივე გუნდისთვის მიმინო ჯუნიორისთვის 
+               და მიმინოსთვის ძალიან კარგად მიდის. მიმინო ჯუნიორის აღსანიშნავია
+               მათი ტალანტები რომლებიც მომავალში მიმინოს დიდ გუნდში
+               ითამაშებენ. წარმატებები ვუსურვოთ მიმინოს და მიმინო ჯუნიორს...
+
+            </p>
+
+               <h2>
+             ახალგაზრდა ტალანტები
+            </h2>
+
+        </div>
+
+        <p>
+            მიმინოს ახალგაზრდა გუნდი დაემატა, სახელად ს.კ მიმინო ჯუნიორი. ის დაარსდა
+            2026 წლის სექტემბერს და აქვს ძალიან თბილი და კეთილი სივრცე სადა ბავშვს
+            სიარული მოუნდება. გუნდი დაარსდა რათა ახალგაზრდა ტალანტები აეღზარდათ და 
+            მომავლისთვის მიმინოს მთავარ გუნდში თამაში. ბაშვები საკმაოდ კმაყოფილები არიან
+            ვარჯიშებით, გუნდურობითა და მასწავლებლით. გუნდს ჰყავს ბიჭების და გოგოების
+            გუნდიც. წარმატებები ვუსურვოთ ჩვენ პატარა ტალანტებს მათ კარიერაში.
+            </p>
+    </div></section>
+
+
+    <!-- გუნდი -->
+
+    <section class="team-section" id="team">
+
+        <div class="scroll-reveal show">
+
+            <p class="eyebrow">
+                შემადგენლობა
+            </p>
+
+            <h2>
+                მიმინო
+            </h2>
+
+        </div>
+
+
+        <div class="players">
+
+            <div class="player-show" style="transition-delay: 0s;"><strong>1</strong><span>ცესარ ანანაშვილი</span></div>
+            <div class="player-show" style="transition-delay: 0.05s;"><strong>2</strong><span>აკო კაკაურიძე</span></div>
+            <div class="player-show" style="transition-delay: 0.1s;"><strong>3</strong><span>ილია აფშინაშვილი</span></div>
+            <div class="player-show" style="transition-delay: 0.15s;"><strong>4</strong><span>დავით ტურიაშვილი</span></div>
+            <div class="player-show" style="transition-delay: 0.2s;"><strong>5</strong><span>გიგა ჭყოიძე</span></div>
+            <div class="player-show" style="transition-delay: 0.25s;"><strong>6</strong><span>თემო გოგრიჭიანი</span></div>
+            <div class="player-show" style="transition-delay: 0.3s;"><strong>7</strong><span>საბა ონიანი</span></div>
+            <div class="player-show" style="transition-delay: 0.35s;"><strong>8</strong><span>ლუკა ქიმერაძე</span></div>
+            <div class="player-show" style="transition-delay: 0.4s;"><strong>9</strong><span>იოანე ნუცუბიძე</span></div>
+            <div class="player-show" style="transition-delay: 0.45s;"><strong>10</strong><span>დავით ჭითავა</span></div>
+            <div class="player-show" style="transition-delay: 0.5s;"><strong>11</strong><span>დიტო მინაშვილი</span></div>
+            <div class="player-show" style="transition-delay: 0.55s;"><strong>12</strong><span>გიორგი ლოლაძე</span></div>
+            <div class="player-show" style="transition-delay: 0.6s;"><strong>13</strong><span>ზურაბი გიორგაძე</span></div>
+            <div class="player-show" style="transition-delay: 0.65s;"><strong>16</strong><span>თენგო ლუხუტაშვილი</span></div>
+            <div class="player-show" style="transition-delay: 0.7s;"><strong>17</strong><span>ონისე რეხვიაშვილი</span></div>
+            <div class="player-show" style="transition-delay: 0.75s;"><strong>20</strong><span>ლაშა ფხოველიშვილი</span></div>
+            <div class="player-show" style="transition-delay: 0.8s;"><strong>21</strong><span>მარტინ დავიდოვი</span></div>
+            <div class="player-show" style="transition-delay: 0.85s;"><strong>22</strong><span>ბექა მიხანაშვილი</span></div>
+            <div class="player-show" style="transition-delay: 0.9s;"><strong>23</strong><span>ალექსანდრე ჭიჭინავა</span></div>
+            <div class="player-show" style="transition-delay: 0.95s;"><strong>24</strong><span>ლუკა მარიამიძე</span></div>
+            <div class="player-show" style="transition-delay: 1s;"><strong>25</strong><span>ომარ მუხიგულაშვილი</span></div>
+            <div class="player-show" style="transition-delay: 1.05s;"><strong>26</strong><span>ლევან ცაავა</span></div>
+            <div class="player-show" style="transition-delay: 1.1s;"><strong>27</strong><span>ნიკა ნოზაძე</span></div>
+            <div class="player-show" style="transition-delay: 1.15s;"><strong>29</strong><span>თორნიკე გულიაშვილი</span></div>
+            <div class="player-show" style="transition-delay: 1.2s;"><strong>30</strong><span>ლევან გაბუნია</span></div>
+            <div class="player-show" style="transition-delay: 1.25s;"><strong>33</strong><span>ირაკლი მანჩხაშვილი</span></div>
+            <div class="player-show" style="transition-delay: 1.3s;"><strong>37</strong><span>დავით ქამუშაძე</span></div>
+            <div class="player-show" style="transition-delay: 1.35s;"><strong>69</strong><span>გიორგი გოცირიძე</span></div>
+            <div class="player-show" style="transition-delay: 1.4s;"><strong>77</strong><span>ლაშა ქაჯაია</span></div>
+            <div class="player-show" style="transition-delay: 1.45s;"><strong>80</strong><span>ნიკა კობაური</span></div>
+            <div class="player-show" style="transition-delay: 1.5s;"><strong>88</strong><span>დავით რაზმაძე</span></div>
+
+        </div>
+
+
+        <!-- ჯუნიორები -->
+
+        <div class="junior-squad">
+
+            <div class="junior-heading scroll-reveal">
+
+                <p class="eyebrow">
+                    შემადგენლობა
+                </p>
+
+                <h3>
+                    მიმინო ჯუნიორი
+                </h3>
+
+            </div>
+
+
+            <div class="players">
+
+                <div><strong>77</strong><span>ვახო გობრონიძე</span></div>
+                <div><strong>5</strong><span>გიორგი გობრონიძე</span></div>
+                <div><strong>11</strong><span>ანდრია ლობჟანიძე</span></div>
+                <div><strong>10</strong><span>ალექსანდრე ასაბაშილი</span></div>
+                <div><strong>30</strong><span>ცოტნე კვაჭაძე</span></div>
+                <div><strong>27</strong><span>გიორგი სოფრომაძე</span></div>
+                <div><strong>17</strong><span>გაბრიელ ჩარგეიშვილი</span></div>
+                <div><strong>20</strong><span>ნიკოლოზ ჩარგეიშვილი</span></div>
+                <div><strong>7</strong><span>რამილ აბილოვი</span></div>
+                <div><strong>4</strong><span>გიორგი ჩოხელი</span></div>
+                <div><strong>9</strong><span>რომა აბილოვი</span></div>
+                <div><strong>2</strong><span>რავილ აბილოვი</span></div>
+                <div><strong>28</strong><span>ლაშა მელიქიშვილი</span></div>
+                <div><strong>7</strong><span>ანასტასია ხუხუა</span></div>
+                <div><strong>6</strong><span>ლილე ხუხუა</span></div>
+                <div><strong>1</strong><span>ილია ავსაჯანიშვილი</span></div>
+                <div><strong>26</strong><span>მარიამ მელიქიძე</span></div>
+                <div><strong>19</strong><span>გიორგი ნატროშვილი</span></div>
+                <div><strong>13</strong><span>ბარბარე ნატროშვილი</span></div>
+                <div><strong>3</strong><span>ნიკოლოზ ანანიძე</span></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- მწვრთნელები -->
+
+        <div class="junior-squad">
+
+            <div class="junior-heading scroll-reveal">
+
+                <p class="eyebrow">
+                    მწვრთნელები
+                </p>
+
+                <h3>
+                    მიმინო - მიმინო ჯუნიორი
+                </h3>
+
+            </div>
+
+
+            <div class="players">
+
+                <div><span>სულო ბროლაძე</span></div>
+                <div><span>ბერდია ჩოხელი</span></div>
+                <div><span>ომარ მუხიგულაშვილი</span></div>
+                <div><span>თემურ გოგრიჭიანი</span></div>
+                <div><span>დათუნა ჭითავა</span></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ფორმები -->
+
+    <section class="kits" id="kits">
+
+        <div class="kits-heading scroll-reveal">
+
+            <p class="eyebrow">
+                საკლუბო ფორმა
+            </p>
+
+            <h2>
+                მიმინოს ფორმები
+            </h2>
+
+            <p>
+                2026 წლის სეზონის ფორმები
+            </p>
+
+        </div>
+
+
+        <div class="kit-grid">
+
+            <article class="kit-card">
+
+                <img src="./Fc Mimino 2024_files/mimino-kit-2026.jpg" alt="მიმინოს მთავარი ფორმა">
+
+                <div class="kit-details">
+
+                    <p class="eyebrow">
+                        მთავარი ფორმა
+                    </p>
+
+                    <h3>
+                        ს.კ მიმინო 2024
+                    </h3>
+
+                </div>
+
+            </article>
+
+
+            <article class="kit-card">
+
+                <img src="./Fc Mimino 2024_files/mimino-kit-second-2026.jpg" alt="მიმინოს თეთრი ფორმა">
+
+                <div class="kit-details">
+
+                    <p class="eyebrow">
+                        მეორე ფორმა
+                    </p>
+
+                    <h3>
+                        ს.კ მიმინო 2024
+                    </h3>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="scroll-reveal">
+
+    <img class="" src="./Fc Mimino 2024_files/mimino-logo.jpg" height="100">
+
+    <p>
+       © 2026 Mimino FC. შენი ქალაქი. შენი გუნდი.
+    </p>
+
+</footer>
+
+
+<script>
+
+    /* ნელ-ნელა გამოჩენა */
+
+    const revealElements = document.querySelectorAll(
+        '.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right'
+    );
+
+    const revealObserver = new IntersectionObserver(
+        function(entries) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add('show');
+
+                    revealObserver.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+    revealElements.forEach(function(element) {
+
+        revealObserver.observe(element);
+
+    });
+
+
+    /* სიახლეების ნელ-ნელა გამოჩენა */
+
+    const newsCards = document.querySelectorAll('.news-card');
+
+    const newsObserver = new IntersectionObserver(
+        function(entries) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                    const cards = entry.target.parentElement.children;
+
+                    for (let i = 0; i < cards.length; i++) {
+
+                        cards[i].style.transitionDelay = (i * 0.18) + 's';
+
+                    }
+
+                    entry.target.classList.add('news-show');
+
+                    newsObserver.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+    newsCards.forEach(function(card) {
+
+        newsObserver.observe(card);
+
+    });
+
+
+    /* მოთამაშეების ნელ-ნელა გამოჩენა */
+
+    const playerGroups = document.querySelectorAll('.players');
+
+    const playerObserver = new IntersectionObserver(
+        function(entries) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                    const players = entry.target.querySelectorAll(':scope > div');
+
+                    players.forEach(function(player, index) {
+
+                        player.style.transitionDelay =
+                            (index * 0.05) + 's';
+
+                        setTimeout(function() {
+
+                            player.classList.add('player-show');
+
+                        }, 50);
+
+                    });
+
+                    playerObserver.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.10
+        }
+    );
+
+
+    playerGroups.forEach(function(group) {
+
+        playerObserver.observe(group);
+
+    });
+
+
+    /* ფორმების ნელ-ნელა გამოჩენა */
+
+    const kitCards = document.querySelectorAll('.kit-card');
+
+    const kitObserver = new IntersectionObserver(
+        function(entries) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                    const cards = entry.target.parentElement.children;
+
+                    for (let i = 0; i < cards.length; i++) {
+
+                        cards[i].style.transitionDelay =
+                            (i * 0.2) + 's';
+
+                    }
+
+                    entry.target.classList.add('kit-show');
+
+                    kitObserver.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+    kitCards.forEach(function(card) {
+
+        kitObserver.observe(card);
+
+    });
+
+</script>
+
+
+<!-- Code injected by live-server -->
+
+<script>
+
+    if ('WebSocket' in window) {
+
+        (function () {
+
+            function refreshCSS() {
+
+                var sheets =
+                    [].slice.call(
+                        document.getElementsByTagName("link")
+                    );
+
+                var head =
+                    document.getElementsByTagName("head")[0];
+
+                for (var i = 0; i < sheets.length; ++i) {
+
+                    var elem = sheets[i];
+
+                    var parent =
+                        elem.parentElement || head;
+
+                    parent.removeChild(elem);
+
+                    var rel = elem.rel;
+
+                    if (
+                        elem.href &&
+                        typeof rel != "string" ||
+                        rel.length == 0 ||
+                        rel.toLowerCase() == "stylesheet"
+                    ) {
+
+                        var url =
+                            elem.href.replace(
+                                /(&|\?)_cacheOverride=\d+/,
+                                ''
+                            );
+
+                        elem.href =
+                            url +
+                            (url.indexOf('?') >= 0 ? '&' : '?') +
+                            '_cacheOverride=' +
+                            (new Date().valueOf());
+
+                    }
+
+                    parent.appendChild(elem);
+
+                }
+
+            }
+
+            var protocol =
+                window.location.protocol === 'http:'
+                ? 'ws://'
+                : 'wss://';
+
+            var address =
+                protocol +
+                window.location.host +
+                window.location.pathname +
+                '/ws';
+
+            var socket =
+                new WebSocket(address);
+
+            socket.onmessage =
+                function (msg) {
+
+                    if (msg.data == 'reload')
+                        window.location.reload();
+
+                    else if (msg.data == 'refreshcss')
+                        refreshCSS();
+
+                };
+
+            if (
+                sessionStorage &&
+                !sessionStorage.getItem(
+                    'IsThisFirstTime_Log_From_LiveServer'
+                )
+            ) {
+
+                console.log('Live reload enabled.');
+
+                sessionStorage.setItem(
+                    'IsThisFirstTime_Log_From_LiveServer',
+                    true
+                );
+
+            }
+
+        })();
+
+    }
+
+    else {
+
+        console.error(
+            'Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.'
+        );
+
+    }
+
+</script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
